@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relatorio_cidades>
+    <head>
+        <title>Relatório de Nomes de Cidades</title>
+    </head>
+    <body>
+        <h1>Relatório de Nomes de Cidades</h1>
+        <ul>
+            <li>
+                teste
+            </li>
+        </ul>
+    </body>
+</relatorio_cidades>
