@@ -1,18 +1,22 @@
+// Importação dos componentes para instanciar
 const CsvComponent = require("./CsvComponent");
 const HtmlComponent = require("./HtmlComponent");
 const XmlComponent = require("./XmlComponent");
 const YmlComponent = require("./YmlComponent");
 const Composite = require("./Composite");
 
+// instanciamento dos componentes de cada tipo de arquivo em constantes
 const csv = new CsvComponent();
 const html = new HtmlComponent();
 const xml = new XmlComponent();
 const yml = new YmlComponent();
 
-const composite = new Composite();
-composite.add(csv)
+//Instanciamento do Composite para o carregamento de arquivos csv
+const compositeCsv = new Composite();
+compositeCsv.add(csv)
 
-composite.load('data/cidades.csv').then((result) => {
+//carregamento do arquivo das cidades em formato csv
+compositeCsv.load('data/cidades.csv').then((result) => {
     console.log(result);
 })
 
