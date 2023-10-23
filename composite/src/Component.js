@@ -2,7 +2,7 @@ const fs = require('fs');
 
 module.exports = class Component {
     citiesObject;
-    cities
+    cities;
     parent;
 
     setParent(parent) {
