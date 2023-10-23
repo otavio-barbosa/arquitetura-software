@@ -1,4 +1,4 @@
-import fs from 'node:fs';
+import fs from "node:fs";
 // let instance;
 
 export default class CitiesReporter {
@@ -10,16 +10,19 @@ export default class CitiesReporter {
   //   instance = this;
   // }
 
-
   // constructor ({ formaterStrategy }) {
   //   this._formaterStrategy = formaterStrategy;
   // }
 
+  // Método estático para chamada do construtuor, responsável pela garantia que a classe tenha apenas uma instância.
+  // Este método faz a verificação se a instância de CitiesReporter já existe, caso não exista ela é criada, e no caso de já existir a mesma é retornada:
   static getInstance() {
     if (!CitiesReporter.instance) {
+      // Caso não exista
       CitiesReporter.instance = new CitiesReporter();
     }
 
+    // Retorno da instância
     return CitiesReporter.instance;
   }
 
@@ -37,8 +40,3 @@ export default class CitiesReporter {
     return this._cities;
   }
 }
-
-
-
-
-
