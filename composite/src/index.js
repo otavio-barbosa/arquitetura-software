@@ -13,9 +13,11 @@ const yml = new YmlComponent();
 
 //Instanciamento do Composite para o carregamento de arquivos csv
 const compositeCsv = new Composite();
+// Adicionando componente do tipo csv, onde que com ele é possível 
+// fazer o carregamento do arquivo do tipo csv
 compositeCsv.add(csv)
 
-//carregamento do arquivo das cidades em formato csv
+//carregamento do arquivo das cidades em formato csv atraves do composite
 compositeCsv.load('data/cidades.csv').then((result) => {
     console.log(result);
 })

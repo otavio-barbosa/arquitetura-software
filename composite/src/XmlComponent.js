@@ -2,24 +2,7 @@ const fs = require('node:fs');
 const xml2js = require('xml2js');
 const Component = require('./Component');
 
-
-// module.exports = class XmlComponent extends Component {
-//     async load(filename) {
-//         fs.readFile(filePath, 'utf8', (err, data) => {
-//             if (err) {
-//                 throw err;
-//             }
-
-//             xml2js.parseString(data, (err, result) => {
-//                 if (err) {
-//                     throw err;
-//                 }
-//                 callback(result);
-//             });
-//         });
-//     }
-// }
-
+// Componente de folha a qual faz o carregamento do arquivo xml
 module.exports = class XmlComponent extends Component {
     async load(filename) {
         return new Promise((resolve, reject) => {

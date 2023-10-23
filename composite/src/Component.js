@@ -1,5 +1,6 @@
 const fs = require('fs');
 
+// Component descreve/declara operações comuns a elementos da árvore
 module.exports = class Component {
     citiesObject;
     cities;
