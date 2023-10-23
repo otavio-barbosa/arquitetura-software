@@ -1,17 +1,18 @@
-import sys from 'node:sys';
+import sys from "node:sys";
 
-import FormaterHTML from './src/FormaterHTML.js';
-import FormaterTXT from './src/FormaterTXT.js';
-import CitiesReporter from './src/CitiesReporter.js';
+import FormaterHTML from "./src/FormaterHTML.js";
+import FormaterTXT from "./src/FormaterTXT.js";
+import CitiesReporter from "./src/CitiesReporter.js";
 
 const [cmd, script, param1] = process.argv,
-      filename = './data/cidades-2.json';
+  filename = "./data/cidades-2.json";
 
 const formaterStrategies = {
-  'html': new FormaterHTML(),
-  'txt': new FormaterTXT()
+  html: new FormaterHTML(),
+  txt: new FormaterTXT(),
 };
 
+//Acesso á instância única de CitiesReporter
 let rep = CitiesReporter.getInstance();
 let output = rep.report(filename);
 
@@ -21,9 +22,3 @@ let output = rep.report(filename);
 //     output = reporter.report(filename);
 
 console.log(output);
-
-
-
-
-
-
